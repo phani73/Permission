@@ -1,0 +1,319 @@
+/* General Styling */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.faculty-page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-page {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.student-page {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error-message {
+    color: #d9534f;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Permissions List */
+.permission-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    /* Set a maximum height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.permission-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.permission-item:hover {
+    background-color: white;
+    border-color: #007bff;
+}
+
+.permission-item p {
+    margin: 0;
+}
+
+.download-button {
+    color: blue;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    background: none;
+    transition: color 0.3s ease;
+}
+
+.download-button:hover {
+    color: grey;
+}
+
+.permission-summary {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.permission-summary p {
+    margin: 5px 0;
+}
+
+.permission-summary strong {
+    color: #000;
+}
+
+/* Radio Buttons as Tabs */
+.radio-tabs {
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Radio input styling */
+.radio-tabs input[type="radio"] {
+    display: none;
+}
+
+/* Label styling for tabs */
+.radio-tabs label {
+    flex: 1;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    border-right: 1px solid #ccc;
+    position: relative;
+    color: #555;
+}
+
+/* Last tab should not have border on the right */
+.radio-tabs label:last-of-type {
+    border-right: none;
+}
+
+/* Badge styling */
+.radio-tabs label .badge {
+    background-color: #f9f4f4;
+    border-radius: 50%;
+    padding: 0 5px;
+    margin-left: 8px;
+    font-size: 0.75rem;
+    color: #555;
+    display: inline-block;
+}
+
+/* Checked state styling */
+.radio-tabs input[type="radio"]:checked+label {
+    background-color: #e6f0ff;
+    border-color: #007bff;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Active tab border adjustment */
+.radio-tabs input[type="radio"]:checked+label::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #007bff;
+}
+
+/* For accessibility, maintain focus state */
+.radio-tabs input[type="radio"]:focus+label {
+    outline: 2px solid #007bff;
+}
+
+@media (max-width: 700px) {
+    .radio-tabs {
+        flex-direction: column;
+    }
+
+    .radio-tabs label {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .radio-tabs label:last-of-type {
+        border-bottom: none;
+    }
+}
+.time-stamp {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 650px;
+}
+
+.time-stamp svg {
+    margin-right: 5px;
+}
+
+.time-stamp1 {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+    margin-top: 2px;
+    padding-left: 650px;
+}
+.time-stamp1 svg {
+    margin-right: 5px;
+}
+.status {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 200px;
+    /* Adjust width as needed */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* Position above the text */
+    left: 50%;
+    margin-left: -100px;
+    /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.status:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* SFPages.css */
+
+/* Style for rejection reason message */
+.rejection-reason {
+    background-color: #f8d7da;
+    /* Light red background */
+    color: #721c24;
+    /* Dark red text color */
+    border: 1px solid #f5c6cb;
+    /* Light red border */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Optional: Add some spacing between items */
+.permission-item {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .faculty-page-container {
+        padding: 10px;
+    }
+
+    .faculty-page,
+    .student-page {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .permission-list {
+        max-height: 250px;
+        /* Reduce max height for smaller screens */
+    }
+
+    .permission-item {
+        padding: 10px;
+    }
+
+    .download-button {
+        font-size: medium;
+    }
+
+    .radio-tabs {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .radio-tabs label {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .radio-tabs label:last-of-type {
+        border-bottom: none;
+    }
+
+    .time-stamp {
+        padding-left: 0;
+        justify-content: flex-start;
+    }
+}

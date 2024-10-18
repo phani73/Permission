@@ -1,0 +1,96 @@
+
+.search-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+}
+
+.search-page h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+.btn{
+    color: white;
+    font-size: 20px;
+    background-color: #0056b3;
+    border: white;
+    border-radius: 2px;
+
+}
+
+
+
+.search-bar-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar-container input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+.search-bar-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-bar-container button:hover {
+    background-color: #0056b3;
+}
+
+.student-box {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.details-icon {
+    color: #000;
+   
+    font-size: 1.5rem;
+    
+    cursor: pointer;
+    margin-left: 10px;
+    
+}
+
+.details-icon:hover {
+    color: #333;
+    /* Adjust hover color as needed */
+}
+
+.permission-details {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+

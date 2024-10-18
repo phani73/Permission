@@ -1,0 +1,16 @@
+1)HOD 
+
+2)3 SIRS 
+
+HOD
+
+permissions:
+
+rollno, department(A,B,C,D), from,to ,date :
+
+
+sir:
+
+attendance 548  9 to 12 erase 
+
+DJANGO

@@ -1,0 +1,248 @@
+.card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #60a5fa;
+    width: 4rem;
+    height: 2rem;
+    color: #fff;
+}
+
+.message {
+    margin-right: 20rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.permission-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.permission-card {
+    flex: 1 1 300px;
+    /* Adjust width as necessary */
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.permission-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.permission-card strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.permission-card a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.accept {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    /* Green */
+    margin-right: 10px;
+}
+
+.reject {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    /* Red */
+}
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Dark overlay with opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* Ensures the overlay is on top */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    /* Maximum width of the modal */
+    width: 90%;
+    /* Ensures modal is responsive on smaller screens */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    z-index: 1001;
+    /* Ensures the modal content is on top of the overlay */
+    text-align: center;
+    /* Centers the text and content inside the modal */
+}
+
+/* Dialog Actions */
+.dialog-actions {
+    display: flex;
+    justify-content: center;
+    /* Centers the action buttons */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.dialog-actions button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.dialog-actions button:first-of-type {
+    background-color: #ccc;
+    /* Cancel button background color */
+}
+
+.dialog-actions button:last-of-type {
+    background-color: #28a745;
+    /* Confirm button background color */
+    color: white;
+    /* White text for contrast */
+}
+.modal-content textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: none;
+    /* Allows resizing vertically */
+}
+/* Ensures the modal content is centered and scrollable */
+@media screen and (max-height: 600px) {
+    .modal-content {
+        max-height: 90%;
+        overflow-y: auto;
+        /* Adds scrolling if content is too tall */
+    }
+}
+
+/* Mobile Styles */
+
+/* For screens with a maximum width of 768px (tablets and mobile phones) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 0.5rem;
+        /* Reduced space between header items */
+    }
+
+    .message {
+        margin-right: 0;
+        /* Remove margin on smaller screens */
+        font-size: 1rem;
+        /* Adjust font size for better readability */
+        text-align: center;
+        /* Center text alignment */
+    }
+
+    .card {
+        padding: 15px;
+        /* Adjust padding for better fit */
+    }
+
+    .permission-wrapper {
+        gap: 10px;
+        /* Reduced gap between permission cards */
+    }
+
+    .permission-card {
+        flex-basis: calc(100% - 20px);
+        /* Full width minus gap */
+        padding: 15px;
+        /* Adjust padding for better fit */
+    }
+
+    .icon {
+        width: 3rem;
+        /* Smaller icon size */
+        height: 1.5rem;
+        /* Adjust height */
+    }
+
+    .modal-content {
+        width: 95%;
+        /* Increased width to utilize more space */
+        padding: 15px;
+        /* Adjust padding for better fit */
+    }
+
+    .dialog-actions {
+        flex-direction: column;
+        /* Stack buttons vertically */
+        gap: 5px;
+        /* Space between buttons */
+    }
+
+    .dialog-actions button {
+        padding: 10px;
+        /* Adjust button padding */
+        font-size: 16px;
+        /* Increase font size for readability */
+    }
+}
+
+/* For screens with a maximum height of 600px */
+@media screen and (max-height: 600px) {
+    .modal-content {
+        max-height: 90%;
+        /* Restrict max height to 90% of the viewport */
+        overflow-y: auto;
+        /* Enable scrolling if content overflows */
+    }
+}
