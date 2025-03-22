@@ -1,6 +1,9 @@
 Student Permission Connect – MERN Project
 Student Permission Connect is a MERN stack-based project designed to streamline student permission requests and approvals. This system provides a seamless interface for students to submit requests, while administrators and faculty members can review and approve them efficiently.
 
+This is the link which shows the overall working of the project:
+https://drive.google.com/file/d/1QMc9NKlytLqV2-X7z99jur29FxnO6m2t/view?usp=sharing
+
 Key Features
 📝 Student Features
 
